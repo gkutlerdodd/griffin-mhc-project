@@ -3,13 +3,14 @@
 
 # # Parsing NetMHCpan 4.1 Output
 
-# In[16]:
+# In[1]:
 
 
 import numpy as np
 import re
 import pandas as pd
 from scipy import stats
+import sys
 
 #Define a function to parse all binding scores from the file of random peptides
 def parse_random_peptide_scores(filename) :
@@ -57,7 +58,8 @@ empty_df_columns = {
 }
 
 #Load list of allele names
-alleles = pd.read_csv("alleles.csv") #Change alleles.csv to alleles1.csv, alleles2.csv, etc.
+allelefile = sys.argv[1]
+alleles = pd.read_csv(allelefile)
 
 #Load list of virus names
 viruses = pd.read_csv("viruses.csv")
