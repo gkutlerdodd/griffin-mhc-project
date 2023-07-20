@@ -57,9 +57,6 @@ alleles = pd.read_csv(allelefile)
 #Load list of virus names
 viruses = pd.read_csv("viruses.csv")
 
-#Load list of virus names
-viruses = pd.read_csv("viruses.csv")
-
 
 #Iterate through alleles
 for allele in alleles :
